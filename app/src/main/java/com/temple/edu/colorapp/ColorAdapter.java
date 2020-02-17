@@ -12,8 +12,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-class ColorAdapter extends BaseAdapter {
-    public ColorAdapter(Context context) {
+public class ColorAdapter extends BaseAdapter {
+    ColorAdapter(Context context) {
         this.context = context;
         String[] strings = {"red","blue","green","black","olive","navy", "cyan","magenta","yellow",
                 "grey"};
@@ -49,7 +49,7 @@ class ColorAdapter extends BaseAdapter {
         ((TextView)convertView.findViewById(R.id.text_color)).setText(item);
         convertView.findViewById(R.id.layout_spin).setBackgroundColor(Color.parseColor(item));
 
-        if(item.equals("black") || item.equals("navy")){
+        if(item.equals("black") || item.equals("navy") || item.equals("blue")){
             ((TextView)convertView.findViewById(R.id.text_color)).setTextColor(Color.parseColor(
                     "white"));
         }else{
